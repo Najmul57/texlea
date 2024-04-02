@@ -11,23 +11,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
+
+    <!-- scroll up button start  -->
+    <button id="scrollToTopBtn" class="scroll-top scroll-to-target" data-target="html">
+        <i class="fas fa-angle-up"></i>
+    </button>
+    <!-- scroll up button end -->
+
 
     <!-- header start -->
     <header>
         <div class="header-area">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 col-10">
                         <div class="header-left">
                             <div class="logo">
                                 <a href="">
                                     <img src="images/logo/logo.png" alt="logo">
                                 </a>
                             </div>
-                            <div class="header-menu">
+                            <div class="header-menu d-none d-lg-block">
                                 <ul>
                                     <li><a href="">home</a></li>
                                     <li><a href="">service</a></li>
@@ -51,16 +59,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 d-flex align-items-center justify-content-end">
+                    <div class="col-lg-4 col-2 d-flex align-items-center justify-content-end">
                         <div class="header-right">
                             <ul>
-                                <li><span title="search" data-bs-toggle="modal" data-bs-target="#searchModal"><i
-                                            class="fa fa-search"></i></span></li>
-                                <li><a href="" title="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li><a href="" title="instagram"><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="" title="twitter"><i class="fa-brands fa-twitter"></i></a></li>
-                                <li><span title="bars" data-bs-toggle="offcanvas" href="#offcanvasItem" role="button" aria-controls="offcanvasExample"><i class="fa-solid fa-bars-staggered"></i></span></li>
+                                <li class="d-none d-lg-block"><span title="search" data-bs-toggle="modal"
+                                        data-bs-target="#searchModal"><i class="fa fa-search"></i></span></li>
+                                <li class="d-none d-lg-block"><a href="" title="facebook"><i
+                                            class="fa-brands fa-facebook-f"></i></a></li>
+                                <li class="d-none d-lg-block"><a href="" title="linkedin"><i
+                                            class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li class="d-none d-lg-block"><a href="" title="instagram"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li class="d-none d-lg-block"><a href="" title="twitter"><i
+                                            class="fa-brands fa-twitter"></i></a></li>
+
+                                <li><span title="bars" data-bs-toggle="offcanvas" href="#offcanvasItem" role="button"
+                                        aria-controls="offcanvasExample"><i
+                                            class="fa-solid fa-bars-staggered"></i></span></li>
                             </ul>
                         </div>
                     </div>
@@ -69,15 +84,16 @@
         </div>
     </header>
 
-    <!-- Modal -->
+    <!-- Search Modal -->
     <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <button type="button" class="btn-close search__close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close search__close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                     <form action="" method="get">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="search...">
+                            <input type="text" class="form-control" placeholder="search your keywords...">
                         </div>
                     </form>
                 </div>
@@ -87,14 +103,85 @@
 
     <!-- offcanvas -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasItem" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header bg-danger">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel"><img src="images/logo/logo.png" alt=""></h5>
-          <button type="button" class="btn-close sidebar__address" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><img src="images/logo/logo.png" alt=""></h5>
+            <button type="button" class="btn-close sidebar__address" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
+            <div class="d-lg-none">
+                <div class="mobile__menu">
+                    <ul>
+                        <li><a href="">home</a></li>
+                        <li><a href="">services</a></li>
+                        <li>
+                            <a class="categoryToggle" href="javascript:void(0)">Category</a>
+                            <ul class="mobile__category">
+                                <li>
+                                    <a class="categoryToggle" href="#">category</a>
+                                    <ul class="mobile__subcategory">
+                                        <li><a href="#">subcategory</a></li>
+                                        <li><a href="#">subcategory</a></li>
+                                        <li><a href="#">subcategory</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="categoryToggle" href="#">category</a>
+                                    <ul class="mobile__subcategory">
+                                        <li><a href="#">subcategory</a></li>
+                                        <li><a href="#">subcategory</a></li>
+                                        <li><a href="#">subcategory</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="categoryToggle" href="#">category</a>
+                                    <ul class="mobile__subcategory">
+                                        <li><a href="#">subcategory</a></li>
+                                        <li><a href="#">subcategory</a></li>
+                                        <li><a href="#">subcategory</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="">Global Location</a></li>
+                    </ul>
+                </div>
 
+                <div class="mobile__social">
+                    <ul class="d-flex align-items-center" style="gap: 20px;">
+                        <li><span title="search" data-bs-toggle="modal"
+                            data-bs-target="#searchModal"><i class="fa fa-search"></i></span></li>
+                        <li><a href="" title="facebook"><i
+                                    class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="" title="linkedin"><i
+                                    class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="" title="instagram"><i
+                                    class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="" title="twitter"><i
+                                class="fa-brands fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="sidebar_address_contact">
+                <ul>
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <span>60, Garib e Newaz Avenue, Sector 13, Uttara</span>
+                    </li>
+                    <li>
+                        <span><i class="fa-regular fa-envelope"></i></span>
+                        <span><a href="mailto:info@gmail.com">info@gmail.com</a></span>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone-volume"></i></span>
+                        <span><a href="tel:+88012222222">+88012222222</a></span>
+                    </li>
+                </ul>
+                <button type="button" class="btn account__btn"><a href="">Account</a></button>
+            </div>
         </div>
-      </div>
+    </div>
 
     <!-- header end -->
 
@@ -102,48 +189,46 @@
     <div class="slider-area slider__active">
         <div class="single-slider">
             <img src="images/banner/banner-1.jpg" alt="" class="w-full">
-            <div class="slider__content">
+            <!-- <div class="slider__content">
                 <h4>Footwear that blends comfort and style seamlessly.</h4>
                 <div class="slider__btn">
                     <a href="" class="btn btn-sm">About US</a>
                     <a href="" class="btn btn-sm">Contact US</a>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="single-slider">
             <img src="images/banner/banner2.jpg" alt="" class="w-full">
-            <div class="slider__content">
+            <!-- <div class="slider__content">
                 <h4>Creating intricate handicrafts is a delightful art</h4>
                 <div class="slider__btn">
                     <a href="" class="btn btn-sm">About US</a>
                     <a href="" class="btn btn-sm">Contact US</a>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="single-slider">
             <img src="images/banner/banner3.jpg" alt="" class="w-full">
-            <div class="slider__content">
+            <!-- <div class="slider__content">
                 <h4>Elegant apparel enhancing your style with sophistication</h4>
                 <div class="slider__btn">
                     <a href="" class="btn btn-sm">About US</a>
                     <a href="" class="btn btn-sm">Contact US</a>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="single-slider">
             <img src="images/banner/banner-4.jpg" alt="" class="w-full">
-            <div class="slider__content">
+            <!-- <div class="slider__content">
                 <h4>Elegant apparel enhancing your style with sophistication</h4>
                 <div class="slider__btn">
                     <a href="" class="btn btn-sm">About US</a>
                     <a href="" class="btn btn-sm">Contact US</a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- slider end -->
-
-
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -151,6 +236,43 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        // Selecting all elements with the class 'categoryToggle'
+        var categoryToggles = document.querySelectorAll('.categoryToggle');
+
+        // Looping through each element with the class 'categoryToggle'
+        categoryToggles.forEach(function (toggle) {
+            // Adding click event listener to each 'categoryToggle' element
+            toggle.addEventListener('click', function (event) {
+                // Preventing the default action of the link
+                event.preventDefault();
+
+                // Selecting the next sibling element with class 'mobile__category'
+                var categoryList = toggle.nextElementSibling;
+
+                // Toggling the display of the 'mobile__category' element
+                if (categoryList.style.display === 'none' || categoryList.style.display === '') {
+                    categoryList.style.display = 'block';
+                } else {
+                    categoryList.style.display = 'none';
+                }
+
+                // Selecting the 'mobile__subcategory' elements within the categoryList
+                var subcategoryLists = categoryList.querySelectorAll('.mobile__subcategory');
+
+                // Looping through each 'mobile__subcategory' element and toggling its display
+                subcategoryLists.forEach(function (subcategoryList) {
+                    // Toggling the display of the 'mobile__subcategory' element
+                    if (subcategoryList.style.display === 'none' || subcategoryList.style.display === '') {
+                        subcategoryList.style.display = 'block';
+                    } else {
+                        subcategoryList.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 
 
 </body>

@@ -5,11 +5,8 @@
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
     .slider__content h4 {
-        font-size: 25px;
+        font-size: 30px;
     }
-    /* .slider__content {
-        top: 70%;
-    } */
     .slider__btn {
         margin-top: 20px;
     }
@@ -18,13 +15,46 @@
 
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
-   
+    .slider__content h4 {
+        font-size: 25px;
+    }
+    .header-left {
+        padding: 5px;
+    }
+    .slider__btn {
+        margin-top: 30px;
+    }
+    .slider__content {
+        width: 90%;
+    }
+    /* .single-slider {
+        position: relative;
+        height: 50vh;
+    } */
 }
 
 
 /* small mobile :320px. */
 @media (max-width: 767px) {
-  
+    .slider__content h4 {
+        font-size: 25px;
+    }
+    .header-left {
+        padding: 5px;
+    }
+    .slider__btn {
+        margin-top: 20px;
+    }
+    .slider__content {
+        width: 90%;
+    }
+    .single-slider {
+        position: relative;
+        height: 50vh;
+    }
+    #bg-video{
+        height: 100%;
+    }
 }
 
 /* Large Mobile :480px. */

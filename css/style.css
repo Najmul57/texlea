@@ -29,14 +29,12 @@ a {
 /* header */
 .slider-area {
     position: relative;
-    top: -100px;
 }
 
 .header-area {
     position: relative;
     z-index: 9;
-    background: transparent;
-    border-bottom: 1px solid #fff;
+    background-image: linear-gradient(to right, #198754, #2aa7a1, #7fc2d6, #ccddf1, #ffffff);
 }
 
 .header-left {
@@ -71,7 +69,7 @@ a {
 }
 
 .header-left .logo a img {
-    width: 172px;
+    width: 100%;
 }
 
 .header-menu li:hover>a {
@@ -169,10 +167,18 @@ ul.sub__category>li>a:hover {
 }
 
 .header-right ul li i {
-    color: #fff;
+    color: #000;
     cursor: pointer;
     transition: all .5s ease-in-out;
     font-size: 18px;
+}
+
+.offcanvas-backdrop {
+    cursor: crosshair;
+}
+
+.btn.account__btn a {
+    color: #000;
 }
 
 .header-right ul li i:hover {
@@ -265,6 +271,17 @@ button.btn.account__btn:hover a {
     margin-bottom: 20px;
 }
 
+.mobile__menu ul li {
+    padding: 7px 8px;
+    margin-bottom: 10px;
+    background: #f4f4f4;
+}
+
+.mobile__menu ul li a {
+    font-size: 16px;
+    font-weight: 500;
+}
+
 .mobile__category,
 .mobile__subcategory {
     margin-left: 10px;
@@ -294,6 +311,7 @@ button.btn.account__btn:hover a {
     border-radius: 50%;
     transform: translateY(-50%);
 }
+
 .mobile__subcategory li a::after {
     position: absolute;
     content: '';
@@ -311,27 +329,49 @@ button.btn.account__btn:hover a {
     color: #000;
     font-size: 18px;
     transition: all .5s ease-in-out;
-  }
-  .mobile__social {
+}
+
+.mobile__social {
     margin-bottom: 20px;
-  }
-  .mobile__social ul li a i:hover {
+}
+
+.mobile__social ul li a i:hover {
     color: #198754;
     transform: scale(1.2);
-  }
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    /* width: 100%;
+    min-height: 100px;
+    height: 100%;
+    width: auto;
+    height: auto; */
+    z-index: -1000;
+    background-size: cover;
+    background-position: center;
+}
+
+
 /* login register */
 
 
 /* slider */
 .single-slider img {
     width: 100%;
-    /* max-height: 600px; */
     height: 100%;
     object-fit: cover;
 }
 
 .single-slider {
     position: relative;
+    ;
+
 }
 
 .single-slider::after {
@@ -398,7 +438,168 @@ button.btn.account__btn:hover a {
     margin-top: 50px;
 }
 
-/* scrollup */
+/* feature start */
+
+.single-features h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.single-features>p {
+    font-size: 17px;
+    line-height: 30px;
+    margin: 0;
+}
+
+.single-features>img {
+    margin-bottom: 30px;
+}
+
+.single-features {
+    padding: 10px;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.single-features:hover {
+    animation: borderAnimation 1s infinite alternate;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #ddd;
+    }
+
+    50% {
+        border-color: green;
+    }
+
+    100% {
+        border-color: #ddd;
+    }
+}
+
+/* feature end */
+
+/* about start */
+
+.about-bg {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: inherit;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 10px;
+}
+
+.about-bg::after {
+    position: absolute;
+    content: '';
+    left: 10%;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    background: #19875482;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.btn.about-btn {
+    border: 2px solid #198754;
+    transition: all .5s ease-in-out;
+}
+
+.btn.about-btn:hover {
+    background: #198754;
+    color: #fff;
+}
+
+/* about end */
+
+/* certificate start */
+.certificate-area {
+    background: #F7F7FD;
+}
+
+/* certificate end */
+
+/* portfolio start */
+
+.single-portfolio {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-title {
+    position: absolute;
+    bottom: -40px;
+    text-align: center;
+    width: 100%;
+    background: #198754;
+    color: #fff;
+    padding: 10px;
+    line-height: 1;
+    font-size: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.single-portfolio:hover .portfolio-title {
+    bottom: 0;
+}
+
+.portfolio-image::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    background: #19875461;
+    transition: all .5s ease-in-out;
+}
+
+.single-portfolio:hover .portfolio-image::after {
+    width: 100%;
+    height: 100%;
+    top: 0
+}
+
+/* portfolio end */
+
+/* office location */
+.office__location {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.office__image img {
+    width: 100%;
+    min-height: 300px;
+    height: 100%;
+    max-height: 300px;
+}
+
+.single__office {
+    position: relative;
+}
+
+.office__feature {
+	position: absolute;
+	top: 0;
+	padding-left: 30px;
+	width: 100%;
+	height: 100%;
+	padding-top: 30px;
+}
+.office__feature p {
+    margin-bottom: 0;
+    color: #fff;
+  }
+/* office end */
 
 /* scrollUp */
 .scroll-top {

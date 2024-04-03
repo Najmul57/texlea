@@ -574,6 +574,7 @@ button.btn.account__btn:hover a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .office__image img {
@@ -591,14 +592,45 @@ button.btn.account__btn:hover a {
 	position: absolute;
 	top: 0;
 	padding-left: 30px;
-	width: 100%;
-	height: 100%;
+	width: 0;
+	height: 0;
+	font-family: "Poppins", sans-serif;
 	padding-top: 30px;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+    transition: all .5s ease-in-out;
+}
+.single__office:hover .office__feature{
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
 }
 .office__feature p {
-    margin-bottom: 0;
-    color: #fff;
-  }
+	margin-bottom: 0;
+	color: #000;
+	position: relative;
+    transition: all .5s ease-in-out;
+	z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+}
+.single__office:hover .office__feature p{
+    opacity: 1;
+    visibility: visible;
+}
+.office__feature::after {
+    position: absolute;
+    content: '';
+    background: #F1F1F1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease-in-out;
+}
+
 /* office end */
 
 /* scrollUp */

@@ -589,37 +589,41 @@ button.btn.account__btn:hover a {
 }
 
 .office__feature {
-	position: absolute;
-	top: 0;
-	padding-left: 30px;
-	width: 0;
-	height: 0;
-	font-family: "Poppins", sans-serif;
-	padding-top: 30px;
-	left: 0;
-	opacity: 0;
-	visibility: hidden;
+    position: absolute;
+    top: 0;
+    padding-left: 30px;
+    width: 0;
+    height: 0;
+    font-family: "Poppins", sans-serif;
+    padding-top: 30px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
     transition: all .5s ease-in-out;
 }
-.single__office:hover .office__feature{
+
+.single__office:hover .office__feature {
     opacity: 1;
     visibility: visible;
     width: 100%;
     height: 100%;
 }
+
 .office__feature p {
-	margin-bottom: 0;
-	color: #000;
-	position: relative;
+    margin-bottom: 0;
+    color: #000;
+    position: relative;
     transition: all .5s ease-in-out;
-	z-index: 2;
+    z-index: 2;
     opacity: 0;
     visibility: hidden;
 }
-.single__office:hover .office__feature p{
+
+.single__office:hover .office__feature p {
     opacity: 1;
     visibility: visible;
 }
+
 .office__feature::after {
     position: absolute;
     content: '';
@@ -632,6 +636,104 @@ button.btn.account__btn:hover a {
 }
 
 /* office end */
+
+/* contact start */
+.footer__area {
+    background: #198754c2;
+}
+
+.single__footer a img {
+    margin-bottom: 20px;
+}
+
+.single__footer p {
+    color: #fff;
+}
+
+.single__contact {
+    background: #ddd;
+    border-radius: 10px;
+    padding: 30px 20px;
+    transition: all .5s ease-in-out;
+    border-bottom: 5px solid transparent;
+}
+
+.single__contact h4 {
+    margin-bottom: 0;
+    padding: 10px 0;
+}
+
+.single__contact a {
+    display: block;
+    color: #000;
+    font-size: 15px;
+}
+
+.single__contact:hover {
+    border-bottom: 5px solid #198754;
+}
+
+.contact__area input,
+.contact__area textarea {
+    border: 1px solid #4aa078;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.footer_contact ul li {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer_contact ul li span a {
+    color: #000;
+    text-transform: full-size-kana;
+}
+
+.single__footer ul li a {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+.footer_contact ul li span,
+.footer_contact ul li span a {
+    color: #fff;
+}
+
+.single__footer a img {
+    margin-bottom: 20px;
+}
+
+.single__footer p {
+    color: #fff;
+}
+
+.footer_contact ul li span,
+.footer_contact ul li span a {
+    color: #fff;
+}
+
+.single__footer h4 {
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.single__footer h4::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 100%;
+    background: #fff;
+    width: 50px;
+    height: 2px;
+}
+
+/* contact end */
 
 /* scrollUp */
 .scroll-top {
@@ -672,3 +774,15 @@ button.btn.account__btn:hover a {
             rgba(0, 0, 0, 0.25) 0%,
             rgba(0, 0, 0, 0) 80%);
 }
+
+.copyright .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .copyright {
+    padding: 15px 0;
+    background: #198754;
+  }
+  .copyright .container span, .copyright .container span a {
+    color: #fff;
+  }

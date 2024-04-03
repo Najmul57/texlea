@@ -533,6 +533,10 @@ button.btn.account__btn:hover a {
     overflow: hidden;
 }
 
+.single-portfolio:hover img {
+    transform: scale(1.2);
+}
+
 .portfolio-title {
     position: absolute;
     bottom: -40px;
@@ -543,6 +547,15 @@ button.btn.account__btn:hover a {
     padding: 10px;
     line-height: 1;
     font-size: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.portfolio-image {
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+.portfolio-image img {
     transition: all .5s ease-in-out;
 }
 
@@ -735,6 +748,20 @@ button.btn.account__btn:hover a {
 
 /* contact end */
 
+/* category start */
+.single-portfolio span {
+    width: 100%;
+    display: block;
+    text-align: center;
+    background: #30a9a5;
+    color: #fff;
+    padding: 10px 0;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+/* category end */
+
 /* scrollUp */
 .scroll-top {
     width: 50px;
@@ -779,11 +806,14 @@ button.btn.account__btn:hover a {
 .copyright .container {
     display: flex;
     justify-content: space-between;
-  }
-  .copyright {
+}
+
+.copyright {
     padding: 15px 0;
     background: #198754;
-  }
-  .copyright .container span, .copyright .container span a {
+}
+
+.copyright .container span,
+.copyright .container span a {
     color: #fff;
-  }
+}

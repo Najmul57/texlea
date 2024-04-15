@@ -31,6 +31,9 @@
         });
     });
 
+    //mobile toggle
+
+    
     // home slider
     $('.slider__active').slick({
         dots: true,
@@ -124,6 +127,7 @@
         slidesToShow: 5,
         autoplay:true,
         arrows:false,
+        dots:true,
         responsive: [
           {
             breakpoint: 768,
@@ -143,7 +147,10 @@
           }
         ]
       });
-          
 
+
+          
+// aos animation
+AOS.init()
 
 })(jQuery);

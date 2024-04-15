@@ -103,6 +103,17 @@
     .single__footer.footer_contact img {
         width: 50% !important;
     }
+    .copyright .container {
+        display: block;
+    }
+    
+    .copyright .container span {
+        display: block;
+        text-align: center;
+    }
+    .scroll-top.open {
+        bottom: 100px;
+    }
 }
 
 /* Large Mobile :480px. */
